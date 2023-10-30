@@ -1,1 +1,88 @@
 @import '~bootstrap/scss/bootstrap.scss';
+
+body {
+    background-color: #1b1925;
+    color: #FFF;
+}
+
+.card-avatar-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    .letter-avatar {
+        font-size: 90px;
+        line-height: 120px;
+        text-align: center;
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        color: #FFF;
+    }
+}
+
+.loader-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .loader {
+        position: relative;
+        margin: auto;
+        box-sizing: border-box;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid rgba(255, 255, 255, 0.1);
+        transform-origin: 50% 50%;
+        transform: perspective(200px) rotateX(66deg);
+        animation: spinner-wiggle 1.2s infinite;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border: 4px solid #0000;
+            animation: spinner-spin 1.2s cubic-bezier(0.6, 0.2, 0, 0.8) infinite,
+                spinner-fade 1.2s linear infinite;
+        }
+
+        &:before {
+            border-top-color: #fff;
+        }
+
+        &:after {
+            border-top-color: #ff3d00;
+            animation-delay: 0.4s;
+        }
+    }
+}
+
+@keyframes spinner-spin {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes spinner-fade {
+
+    25%,
+    75% {
+        opacity: 0.1
+    }
+
+    50% {
+        opacity: 1
+    }
+}

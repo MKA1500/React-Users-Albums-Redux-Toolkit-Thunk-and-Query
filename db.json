@@ -1,8 +1,33 @@
 {
   "users": [
-    { "id": 1, "name": "Darek" },
-    { "id": 2, "name": "Maciej" },
-    { "id": 3, "name": "Asia" }
+    {
+      "id": 1,
+      "name": "Darek"
+    },
+    {
+      "id": 2,
+      "name": "Maciej"
+    },
+    {
+      "id": 3,
+      "name": "Asia"
+    },
+    {
+      "name": "Micheal",
+      "id": 4
+    },
+    {
+      "name": "Ellie",
+      "id": 5
+    },
+    {
+      "name": "Bennett",
+      "id": 6
+    },
+    {
+      "name": "Fletcher",
+      "id": 7
+    }
   ],
   "albums": [],
   "photos": []
