@@ -1,5 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios';
+import { pause } from "../../shared/utils/staticUtils";
 
 const fetchUsers = createAsyncThunk('users/fetch', async () => {
     const response = await axios.get('http://localhost:3005/users');
@@ -9,12 +10,6 @@ const fetchUsers = createAsyncThunk('users/fetch', async () => {
 
     return response.data;
 });
-
-const pause = (duration) => {
-    return new Promise((resolve) => {
-        setTimeout(resolve, duration);
-    });
-}
 
 // there are 3 properties automatically added in:
 // fetchUsers.pending === 'users/fetch/pending'

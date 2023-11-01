@@ -1,28 +1,31 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { fetchUsers, addUser } from "../store";
 import Loader from "./Loader";
 import UserCard from "./userCard";
+import useThunk from "../hooks/useThunk";
 
 function UsersList() {
-    const dispatch = useDispatch();
-    const { isLoading, data, error } = useSelector((state) => {
+    const [doFetchUsers, isLoadingUsers, loadingUsersError] = useThunk(fetchUsers);
+    const [doCreateUser, isCreatingUser, creatingUserError] = useThunk(addUser);
+
+    const { data } = useSelector((state) => {
         return state.users;
     });
 
     const handleUserAdd = () => {
-        dispatch(addUser());
+        doCreateUser();
     };
 
     useEffect(() => {
-        dispatch(fetchUsers())
-    }, [dispatch]);
+        doFetchUsers();
+    }, [doFetchUsers]);
 
-    if (isLoading) {
+    if (isLoadingUsers) {
         return <Loader />
     }
 
-    if (error) {
+    if (loadingUsersError) {
         return <div>Error fetching data...</div>
     }
 
@@ -38,13 +41,17 @@ function UsersList() {
                 <div className="col-8">
                     <h2>List of users</h2> 
                 </div>
-                <div className="col-4 d-flex justify-content-end">
-                    <button 
+                <div className="col-4 d-flex justify-content-end position-relative">
+                    {isCreatingUser 
+                    ? <div className="loader-small-background">
+                        <div className="loader"></div>
+                    </div>
+                    : <button 
                         type="button" 
                         className="btn btn-light"
                         onClick={handleUserAdd}>
                         + Add user
-                    </button>
+                    </button>}
                 </div>
             </div>
             {renderedUsers}

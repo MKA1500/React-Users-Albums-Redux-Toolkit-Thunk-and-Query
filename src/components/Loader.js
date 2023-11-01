@@ -1,6 +1,6 @@
 function Loader() {
     return (
-        <div className="loader-background">
+        <div className="loader-big-background">
             <div className="loader"></div>
         </div>
     );
