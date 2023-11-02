@@ -21,19 +21,18 @@ function UsersList() {
         doFetchUsers();
     }, [doFetchUsers]);
 
-    if (isLoadingUsers) {
-        return <Loader />
-    }
-
-    if (loadingUsersError) {
-        return <div>Error fetching data...</div>
-    }
-
     // before rendering let's sort the ids ascending:
     let newData = [...data];
-    const renderedUsers = newData.sort((a, b) => b.id - a.id).map((user) => {
-        return <UserCard key={user.id} user={user} />;
-    })
+    let content;
+    if (isLoadingUsers) {
+        content = <Loader />
+    } else if (loadingUsersError) {
+        content = <div>Error fetching data...</div>
+    } else {
+        content = newData.sort((a, b) => b.id - a.id).map((user) => {
+            return <UserCard key={user.id} user={user} />;
+        })
+    }
 
     return (
         <div className="container py-5">
@@ -46,15 +45,17 @@ function UsersList() {
                     ? <div className="loader-small-background">
                         <div className="loader"></div>
                     </div>
-                    : <button 
-                        type="button" 
-                        className="btn btn-light"
-                        onClick={handleUserAdd}>
-                        + Add user
-                    </button>}
+                    : creatingUserError 
+                        ? <h5>Creating user error...</h5>
+                        : <button 
+                            type="button" 
+                            className="btn btn-light"
+                            onClick={handleUserAdd}>
+                            + Add user
+                        </button>}
                 </div>
             </div>
-            {renderedUsers}
+            {content}
         </div>
     );
 }

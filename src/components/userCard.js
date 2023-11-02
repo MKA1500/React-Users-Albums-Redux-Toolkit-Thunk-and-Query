@@ -1,4 +1,9 @@
+import { removeUser } from "../store";
+import useThunk from "../hooks/useThunk";
+
 function UserCard({ user }) {
+    const [doRemoveUser, isLoading, error] = useThunk(removeUser);
+
     const letterAvanatar = () => {
         let letter = '';
         if (user.name?.length) {
@@ -13,6 +18,11 @@ function UserCard({ user }) {
         );    
     };
 
+    const onRemoveUser = () => {
+        console.log('onRemoveUser');
+        doRemoveUser(user);
+    };
+
     return (
         <div className="card mb-3">
             <div className="row g-0">
@@ -22,8 +32,21 @@ function UserCard({ user }) {
                 <div className="col-md-10">
                     <div className="card-body">
                         <h5 className="card-title">{user.name}</h5>
-                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <p className="card-text">
+                            <small className="text-body-secondary">
+                                Last updated 3 mins ago
+                            </small>
+                        </p>
+                        <div className="d-flex justify-content-start">
+                            <button
+                                className="btn btn-danger"
+                                onClick={onRemoveUser}>
+                                Delete
+                            </button>
+                            {error && <div className="ml-3">
+                                Error deleting user...
+                            </div>}
+                        </div>
                     </div>
                 </div>
             </div>
