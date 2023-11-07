@@ -9,14 +9,25 @@
       "name": "Maciej"
     },
     {
-      "id": 3,
-      "name": "Asia"
+      "name": "Deven",
+      "id": 3
     },
     {
-      "name": "Edgardo",
+      "name": "Frederik",
       "id": 4
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": 1001,
+      "title": "My photos",
+      "userId": 2
+    },
+    {
+      "id": 1002,
+      "title": "My dog's photos",
+      "userId": 2
+    }
+  ],
   "photos": []
 }

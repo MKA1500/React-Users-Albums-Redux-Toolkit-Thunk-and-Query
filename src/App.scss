@@ -9,17 +9,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 40px;
     height: 100%;
+    margin-right: 1rem;
 
     .letter-avatar {
-        font-size: 90px;
-        line-height: 120px;
+        font-size: 28px;
+        line-height: 38px;
         text-align: center;
-        height: 120px;
-        width: 120px;
+        height: 40px;
+        width: 40px;
         border-radius: 50%;
         color: #FFF;
+        background: #1b1925;
     }
 }
 

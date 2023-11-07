@@ -1,5 +1,7 @@
 import { removeUser } from "../store";
 import useThunk from "../hooks/useThunk";
+import ExpandablePanel from "./expoandablePanel";
+import AlbumsList from "./albumsList";
 
 function UserCard({ user }) {
     const [doRemoveUser, isLoading, error] = useThunk(removeUser);
@@ -11,7 +13,7 @@ function UserCard({ user }) {
         }
         return (
             <div className="card-avatar-wrap">
-                <div className="letter-avatar" style={{ background: '#1b1925'}}>
+                <div className="letter-avatar">
                     {letter}
                 </div>
             </div>
@@ -23,34 +25,28 @@ function UserCard({ user }) {
         doRemoveUser(user);
     };
 
-    return (
-        <div className="card mb-3">
-            <div className="row g-0">
-                <div className="col-md-2">
-                    {letterAvanatar()}
-                </div>
-                <div className="col-md-10">
-                    <div className="card-body">
-                        <h5 className="card-title">{user.name}</h5>
-                        <p className="card-text">
-                            <small className="text-body-secondary">
-                                Last updated 3 mins ago
-                            </small>
-                        </p>
-                        <div className="d-flex justify-content-start">
-                            <button
-                                className="btn btn-danger"
-                                onClick={onRemoveUser}>
-                                Delete
-                            </button>
-                            {error && <div className="ml-3">
-                                Error deleting user...
-                            </div>}
-                        </div>
-                    </div>
-                </div>
+    const header =
+        <div className="d-flex">
+            {letterAvanatar()}
+            <div className="left-header-info">
+                <h3 className="card-title">{user.name}</h3>
             </div>
-        </div>
+            <div className="delete-box d-flex align-items-start px-3">
+                <button
+                    className="btn btn-danger"
+                    onClick={onRemoveUser}>
+                    Delete
+                </button>
+                {error && <div className="ml-3">
+                    Error deleting user...
+                </div>}
+            </div>
+        </div>;
+
+    return (
+        <ExpandablePanel header={header}>
+            <AlbumsList user={user} />
+        </ExpandablePanel>
     );
 }
 
