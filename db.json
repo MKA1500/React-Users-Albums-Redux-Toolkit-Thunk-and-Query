@@ -15,6 +15,18 @@
     {
       "name": "Frederik",
       "id": 4
+    },
+    {
+      "name": "Brenda",
+      "id": 5
+    },
+    {
+      "name": "Cathrine",
+      "id": 6
+    },
+    {
+      "name": "Ford",
+      "id": 7
     }
   ],
   "albums": [
@@ -27,6 +39,161 @@
       "id": 1002,
       "title": "My dog's photos",
       "userId": 2
+    },
+    {
+      "userId": 2,
+      "title": "Tasty Rubber Towels",
+      "id": 1003
+    },
+    {
+      "userId": 1,
+      "title": "Generic Soft Table",
+      "id": 1004
+    },
+    {
+      "userId": 1,
+      "title": "Practical Fresh Soap",
+      "id": 1005
+    },
+    {
+      "userId": 3,
+      "title": "Refined Granite Chips",
+      "id": 1006
+    },
+    {
+      "userId": 3,
+      "title": "Bespoke Granite Ball",
+      "id": 1007
+    },
+    {
+      "userId": 4,
+      "title": "Refined Soft Car",
+      "id": 1008
+    },
+    {
+      "userId": 4,
+      "title": "Elegant Concrete Bike",
+      "id": 1009
+    },
+    {
+      "userId": 4,
+      "title": "Handmade Frozen Bike",
+      "id": 1010
+    },
+    {
+      "userId": 4,
+      "title": "Recycled Cotton Ball",
+      "id": 1011
+    },
+    {
+      "userId": 4,
+      "title": "Rustic Concrete Shirt",
+      "id": 1012
+    },
+    {
+      "userId": 3,
+      "title": "Recycled Soft Hat",
+      "id": 1013
+    },
+    {
+      "userId": 3,
+      "title": "Luxurious Rubber Pizza",
+      "id": 1014
+    },
+    {
+      "userId": 2,
+      "title": "Sleek Soft Computer",
+      "id": 1015
+    },
+    {
+      "userId": 2,
+      "title": "Licensed Wooden Cheese",
+      "id": 1016
+    },
+    {
+      "userId": 1,
+      "title": "Luxurious Concrete Ball",
+      "id": 1017
+    },
+    {
+      "userId": 1,
+      "title": "Licensed Metal Shirt",
+      "id": 1018
+    },
+    {
+      "userId": 5,
+      "title": "Handmade Fresh Bike",
+      "id": 1019
+    },
+    {
+      "userId": 1,
+      "title": "Elegant Wooden Car",
+      "id": 1020
+    },
+    {
+      "userId": 5,
+      "title": "Handmade Bronze Tuna",
+      "id": 1021
+    },
+    {
+      "userId": 5,
+      "title": "Fantastic Cotton Car",
+      "id": 1022
+    },
+    {
+      "userId": 6,
+      "title": "Gorgeous Cotton Tuna",
+      "id": 1023
+    },
+    {
+      "userId": 6,
+      "title": "Electronic Soft Shirt",
+      "id": 1024
+    },
+    {
+      "userId": 6,
+      "title": "Sleek Metal Gloves",
+      "id": 1025
+    },
+    {
+      "userId": 6,
+      "title": "Handmade Bronze Hat",
+      "id": 1026
+    },
+    {
+      "userId": 6,
+      "title": "Generic Rubber Table",
+      "id": 1027
+    },
+    {
+      "userId": 6,
+      "title": "Ergonomic Fresh Shirt",
+      "id": 1028
+    },
+    {
+      "userId": 7,
+      "title": "Intelligent Frozen Sausages",
+      "id": 1029
+    },
+    {
+      "userId": 7,
+      "title": "Awesome Metal Keyboard",
+      "id": 1030
+    },
+    {
+      "userId": 7,
+      "title": "Sleek Metal Table",
+      "id": 1031
+    },
+    {
+      "userId": 7,
+      "title": "Recycled Metal Shoes",
+      "id": 1032
+    },
+    {
+      "userId": 7,
+      "title": "Handcrafted Rubber Mouse",
+      "id": 1033
     }
   ],
   "photos": []

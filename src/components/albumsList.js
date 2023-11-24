@@ -1,9 +1,15 @@
-import { useFetchAlbumsQuery } from "../store";
+import { useFetchAlbumsQuery, useAddAlbumMutation } from "../store";
 import ExpandablePanel from "./expoandablePanel";
 
 function AlbumsList({ user }) {
     // while component rerenders, the request is done only once:
     const { data, error, isLoading } = useFetchAlbumsQuery(user);
+
+    const [addAlbum, results] = useAddAlbumMutation();
+
+    const handleAddAlbum = () => {
+        addAlbum(user);
+    };
 
     let content;
     if (isLoading) {
@@ -23,8 +29,16 @@ function AlbumsList({ user }) {
 
     return (
         <>
-            <div className="albums-list py-3">
-                Albums list for {user.name}
+            <div className="albums-list d-flex justify-content-between align-items-center">
+                <div className="py-3">
+                    Albums list for {user.name}
+                </div>
+                <button 
+                    type="button" 
+                    className="btn btn-warning"
+                    onClick={handleAddAlbum}>
+                    + Add album
+                </button>
             </div>
             {content}
         </>
