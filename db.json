@@ -1,22 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Darek"
-    },
-    {
-      "id": 2,
-      "name": "Maciej"
-    },
-    {
-      "name": "Deven",
-      "id": 3
-    },
-    {
-      "name": "Frederik",
-      "id": 4
-    },
-    {
       "name": "Brenda",
       "id": 5
     },
@@ -27,108 +11,25 @@
     {
       "name": "Ford",
       "id": 7
+    },
+    {
+      "name": "Amelie",
+      "id": 8
+    },
+    {
+      "name": "Kenna",
+      "id": 9
+    },
+    {
+      "name": "Michaela",
+      "id": 10
     }
   ],
   "albums": [
     {
-      "id": 1001,
-      "title": "My photos",
-      "userId": 2
-    },
-    {
-      "id": 1002,
-      "title": "My dog's photos",
-      "userId": 2
-    },
-    {
-      "userId": 2,
-      "title": "Tasty Rubber Towels",
-      "id": 1003
-    },
-    {
-      "userId": 1,
-      "title": "Generic Soft Table",
-      "id": 1004
-    },
-    {
-      "userId": 1,
-      "title": "Practical Fresh Soap",
-      "id": 1005
-    },
-    {
-      "userId": 3,
-      "title": "Refined Granite Chips",
-      "id": 1006
-    },
-    {
-      "userId": 3,
-      "title": "Bespoke Granite Ball",
-      "id": 1007
-    },
-    {
-      "userId": 4,
-      "title": "Refined Soft Car",
-      "id": 1008
-    },
-    {
-      "userId": 4,
-      "title": "Elegant Concrete Bike",
-      "id": 1009
-    },
-    {
-      "userId": 4,
-      "title": "Handmade Frozen Bike",
-      "id": 1010
-    },
-    {
-      "userId": 4,
-      "title": "Recycled Cotton Ball",
-      "id": 1011
-    },
-    {
-      "userId": 4,
-      "title": "Rustic Concrete Shirt",
-      "id": 1012
-    },
-    {
-      "userId": 3,
-      "title": "Recycled Soft Hat",
-      "id": 1013
-    },
-    {
-      "userId": 3,
-      "title": "Luxurious Rubber Pizza",
-      "id": 1014
-    },
-    {
-      "userId": 2,
-      "title": "Sleek Soft Computer",
-      "id": 1015
-    },
-    {
-      "userId": 2,
-      "title": "Licensed Wooden Cheese",
-      "id": 1016
-    },
-    {
-      "userId": 1,
-      "title": "Luxurious Concrete Ball",
-      "id": 1017
-    },
-    {
-      "userId": 1,
-      "title": "Licensed Metal Shirt",
-      "id": 1018
-    },
-    {
       "userId": 5,
       "title": "Handmade Fresh Bike",
       "id": 1019
-    },
-    {
-      "userId": 1,
-      "title": "Elegant Wooden Car",
-      "id": 1020
     },
     {
       "userId": 5,
@@ -194,6 +95,71 @@
       "userId": 7,
       "title": "Handcrafted Rubber Mouse",
       "id": 1033
+    },
+    {
+      "userId": 8,
+      "title": "Handmade Cotton Towels",
+      "id": 1034
+    },
+    {
+      "userId": 8,
+      "title": "Ergonomic Rubber Towels",
+      "id": 1035
+    },
+    {
+      "userId": 8,
+      "title": "Electronic Cotton Sausages",
+      "id": 1036
+    },
+    {
+      "userId": 8,
+      "title": "Modern Concrete Shoes",
+      "id": 1037
+    },
+    {
+      "userId": 8,
+      "title": "Modern Granite Bike",
+      "id": 1038
+    },
+    {
+      "userId": 8,
+      "title": "Rustic Rubber Pants",
+      "id": 1039
+    },
+    {
+      "userId": 8,
+      "title": "Elegant Plastic Bacon",
+      "id": 1040
+    },
+    {
+      "userId": 8,
+      "title": "Practical Plastic Table",
+      "id": 1041
+    },
+    {
+      "userId": 8,
+      "title": "Oriental Frozen Towels",
+      "id": 1042
+    },
+    {
+      "userId": 9,
+      "title": "Handmade Plastic Hat",
+      "id": 1046
+    },
+    {
+      "userId": 9,
+      "title": "Generic Plastic Shoes",
+      "id": 1047
+    },
+    {
+      "userId": 9,
+      "title": "Refined Fresh Shirt",
+      "id": 1048
+    },
+    {
+      "userId": 10,
+      "title": "Handmade Bronze Gloves",
+      "id": 1050
     }
   ],
   "photos": []
